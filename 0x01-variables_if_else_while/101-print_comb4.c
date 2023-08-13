@@ -28,8 +28,11 @@ int main(void)
 						putchar(' ');
 					}
 				}
+				num3++;
 			}
+			num2++;
 		}
+		num1++;
 	}
 		putchar('\n');
 		return (0);
