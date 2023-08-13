@@ -6,23 +6,24 @@
  */
 int main(void)
 {
-	int d;
-	int p;
-	int q;
+	int num1 = 0;
+	int num2;
+	int num3;
 
-	for (d = 0; d < 9; d++)
+	while (num1 <= 9)
 	{
-		for (p = d + 1; p <= 9; p++)
+		num2 = 0;
+		while (num2 <= 9)
 		{
-			for (q = p + 1; q <= 9; q++)
+			num3 = 0;
+			while (num3 <= 9)
 			{
-				if ((p != d) != q)
+				if (num1 != num2 && num1 < num2 && num2 != num3 && num2 < num3)
 				{
-					putchar(d);
-					putchar(p);
-					putchar(q);
-					if (d == 7 && p == 8)
-						continue;
+					putchar(num1 + 48);
+					putchar(num2 + 48);
+					putchar(num3 + 48);
+					if (num1 + num2 + num3 != 24)
 					putchar(',');
 						putchar(' ');
 				}
