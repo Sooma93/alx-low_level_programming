@@ -1,7 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * main - Entery point
+ * print_alphabet - Entery point
  * Descrption: print aphabet
  * Return: Always 0
  */
