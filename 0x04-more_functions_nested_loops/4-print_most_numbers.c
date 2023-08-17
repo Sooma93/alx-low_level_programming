@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_most_number - numbers feom 0 to 9 exapt 2 and 4
+ * print_most_numbers - print 0 to 9 exapet 2 and 4
  * Return: 0
  */
 void print_most_numbers(void)
