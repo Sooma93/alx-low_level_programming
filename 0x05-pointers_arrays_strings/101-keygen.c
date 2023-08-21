@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlip.h>
+#include <stdlib.h>
 #include <time.h>
 /**
  * main - random password
@@ -7,41 +7,25 @@
  */
 int main(void)
 {
-	char pass[84]
-		int index = 0, sum = 0, h1, h2;
+	int pass[100]
+		int i, sum, n;
 
-	srand(time(0));
+	sum = 0;
 
-	while (sum < 2772)
+	srand(time(NULL));
 
+	for (i = 0; i < 100; i++)
 	{
-		pass[index] = 33 + rand() % 94;
-		sum += pass[index++];
-	}
-	pass[index] = '\0';
-	if (sum != 2772)
-	{
-		h1 = (sum - 2772) / 2;
-		h2 = (sum - 2772) / 2;
-		if ((sum - 2772) % 2 != 0)
-			h1++;
-		for (index = 0; pass[index]; index++)
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
 		{
-			if (pass[index] >= (33 +h1))
-			{
-				pass[index] -= h1;
-				break;
-			}
-		}
-		for (index = 0; pass[index]; index++)
-		{
-			if (pass[index] >= (33 + h2))
-			{
-				pass[index] -= h2;
-				break;
-			}
+			n = 2772 - sum - '0'
+				sum += n;
+			putchar(n + '0');
+			break;
 		}
 	}
-	printf("%s", pass);
 	return (0);
 }
