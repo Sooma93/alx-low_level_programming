@@ -29,7 +29,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(99);
 	}
 	if ((*op == '/' && num2 == 0) ||
-	(*op == '%' && num2 == 0))
+			(*op == '%' && num2 == 0))
 	{
 		printf("ERROR\n");
 		exit(100);
