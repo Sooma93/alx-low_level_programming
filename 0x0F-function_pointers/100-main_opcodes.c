@@ -8,8 +8,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *array;
+	int bytes, index;
+	int (*addre)(int, char **) = main;
+	unsigned char opcode;
 
 	if (argc != 2)
 	{
@@ -23,15 +24,15 @@ int main(int argc, char *argv[])
 		printf("ERROR\n");
 		exit(2);
 	}
-	array = (char *)main;
-	for (i = 0; i < bytes; i++)
+	for (index = 0; index < bytes; index++)
 	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", array[i]);
-			break;
-		}
-		printf("%02hhx", array[i]);
+		opcode = *(unsigned char *)addre;
+		printf("%.2x\n", opcode);
+		if (index == bytes - 1)
+			continue;
+		printf(" ");
+		addre++;
 	}
+	printf("\n");
 	return (0);
 }
