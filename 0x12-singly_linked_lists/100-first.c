@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void __attribute__ ((constructor))first (void);
+void first(void) __attribute__ ((constructor));
 /**
  * first - print before main func
  */
