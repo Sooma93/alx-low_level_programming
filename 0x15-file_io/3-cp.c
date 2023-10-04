@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 	if (i < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", argv[1]);
 		exit(98);
 	}
 	j = close(fr);
@@ -41,9 +41,9 @@ int main(int argc, char *argv[])
 	if (j < 0 || k < 0)
 	{
 		if (j < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fr);
+			dprintf(STDERR_FILENO, "Error: Can't close fd  %d\n", fr);
 		if (k < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fw);
+			dprintf(STDERR_FILENO, "Error: Can't close fd  %d\n", fw);
 		exit(100);
 	}
 	return (0);
