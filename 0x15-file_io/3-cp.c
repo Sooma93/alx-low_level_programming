@@ -12,13 +12,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "usege: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fr = open(argv[1], O_RDONLY);
 	if (fr < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	fw = open(argv[2], O_CREAT | O_RDONLY | O_TRUNC, 0664);
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 		if (fw < 0 || write(fw, buf, i) != i)
 		{
-			dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fr);
 			exit(99);
 		}
