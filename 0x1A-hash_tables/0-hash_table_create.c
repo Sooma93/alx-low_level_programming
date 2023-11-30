@@ -4,7 +4,7 @@
 
 /**
  * hash_table_create - to create a hash table
- * @size - array size
+ * @size:  array size
  * Return: Returns a pointer to the newly created hash table
  */
 
