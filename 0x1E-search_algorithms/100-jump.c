@@ -2,10 +2,10 @@
 #include <math.h>
 
 /**
- * jump_search - searches for a value in an array 
+ * jump_search - searches for a value in an array
  * @array: input array
  * @size: size of the array
- * @value: value to search 
+ * @value: value to search
  * Return: index of the number
  */
 int jump_search(int *array, size_t size, int value)
